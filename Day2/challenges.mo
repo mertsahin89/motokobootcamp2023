@@ -1,5 +1,6 @@
 import Text "mo:base/Text";
 import Prim "mo:prim";
+import Array "mo:base/Array";
 
 
 
@@ -31,5 +32,47 @@ actor Day2 {
         };
         return counter;
     };
+
+    // 3 (Thank god dfinity example libraries exists)
+
+    public query func factorial(n : Nat) : async Nat {
+
+    func calculate(m : Nat) : Nat {
+      if (m == 0) {
+        return 1;
+      } else {
+        return m * calculate(m - 1);
+      };
+    };
+
+ 
+    return calculate(n);
+  };
+
+  //4 I didn't expect it to work but life is full of surprises.
+
+  
+  public func number_of_words(arg : Text) : async Nat {
+    var aa : Nat = 1;
+    var bb : Text = "t";
+     for(c in arg.chars()) {
+       bb := Text.fromChar(c);
+       if (bb ==  " "){
+         aa := aa +1;
+       }
+     };
+     return aa;
+  };
+
+
+  //5
+  
+
+  public func find_duplicatese(a : [Nat]) : async [Nat]  {
+    var myArray : [Nat] = Array.reverse(a);
+    var finalArray : [Nat] = Array.reverse(myArray);
+    return finalArray;
+  };
+
 
 };

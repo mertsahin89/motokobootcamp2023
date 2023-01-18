@@ -1,0 +1,1 @@
+# Created svelte project for task but after that i decided to go with vanilla.js with core project and tasks since i don't know svelte. Cheers

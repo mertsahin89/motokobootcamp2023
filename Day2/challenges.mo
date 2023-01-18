@@ -1,6 +1,7 @@
 import Text "mo:base/Text";
 import Prim "mo:prim";
 import Array "mo:base/Array";
+import Nat "mo:base/Nat";
 
 
 
@@ -74,5 +75,21 @@ actor Day2 {
     return finalArray;
   };
 
+  //6 My deepest graditues to denizcan.yilmaz#7286 for his valuable help.
 
+  public func convert_to_binary(n : Nat) : async Text
+  {
+    var tmpF : Nat = 0;
+    var tmpS : Nat = n;
+    var returnText : Text = "";
+
+    while (tmpS > 0)
+    {
+        tmpF := tmpS % 2;
+        returnText := Nat.toText(tmpF) # returnText;
+        tmpS := tmpS / 2;
+    };
+
+    return returnText;
+  };
 };

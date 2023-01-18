@@ -12,6 +12,8 @@ Node Machines
 
 3. I have a neuron with 1O ICPs locked with a dissolve delay of 4 years - my neuron has been locked for 2 years. What is my expected voting power?
 
+-With a locked neuron of 10 ICP and a dissolve delay of 4 years that has been locked for 2 years, you can expect a voting power of approximately 14.2%.
+
 
 
 4. What is wrong with the following code?

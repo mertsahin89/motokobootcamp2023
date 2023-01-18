@@ -1,11 +1,35 @@
-1. Write a function multiply that takes two natural numbers and returns the product.
+1. How much is the current memory capacity of a canister?
 
-2. Write a function volume that takes a natural number n and returns the volumte of a cube with side length n.
+-Memory capacity of a canister 48gb.
 
-3. Write a function hours_to_minutes that takes a number of hours n and returns the number of minutes.
+2. What is the issue with the following code sample?
 
-4. Write two functions set_counter & get_counter.
+actor {
+  let counter : Nat = 0;
+  public func increment_counter() : async () {
+    counter := counter + 1;
+  };
+}
 
-5. Write a function test_divide that takes two natural numbers n and m and returns a boolean indicating if n divides m.
+-Counter variable is immutable therefore can not be changed.
 
-6. Write a function is_even that takes a natural number n and returns a boolean indicating if n is even.
+3. What is the issue with the following code sample?
+
+actor {
+  var message : Text = 0;
+
+  public query func change_message(new_message : Text) : async () {
+    message := new_message;
+    return;
+  };
+  
+  public query func see_message() : async Text {
+    return(message);
+  };
+}
+
+-Message has a strongly typed Text value so it cannot be changed to numeric one.
+
+4. False or True: we can remove the keyword async for return argument of a query function since queries are faster to answer.
+
+-False
